@@ -1,0 +1,40 @@
+﻿@model StormPDP.ViewModels.DevPlanFormViewModel
+
+<div class="card border-primary mb-3">
+    <div class="card-header"><h5><strong>D. Discussion and Ratings</strong></h5></div>
+    <div class="card-body">
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                @Html.LabelFor(m => m.DevelopmentPlan.EmployeeComment)
+                @Html.TextAreaFor(m => m.DevelopmentPlan.EmployeeComment, new { @class = "form-control" })
+            </div>
+            <div class="form-group col-md-12">
+                @Html.LabelFor(m => m.DevelopmentPlan.ManagerComment)
+                @Html.TextAreaFor(m => m.DevelopmentPlan.ManagerComment, new { @class = "form-control" })
+            </div>
+            <div class="form-row col-md-12">
+                <div class="form-group col-md-4">
+                    @Html.Label("Employee's Rating, 1-5")
+                    @Html.TextBoxFor(m => m.DevelopmentPlan.EmployeeRating, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.DevelopmentPlan.EmployeeRating)
+
+                </div>
+                <div class="form-group col-md-4">
+                    @Html.Label("Managers's Rating, 1-5")
+                    @Html.TextBoxFor(m => m.DevelopmentPlan.ManagerRating, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.DevelopmentPlan.ManagerRating)
+
+                </div>
+                <div class="form-group col-md-4">
+                    @Html.Label("Agreed Rating, 1-5")
+                    @Html.TextBoxFor(m => m.DevelopmentPlan.AgreedRating, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.DevelopmentPlan.AgreedRating)
+
+                </div>
+            </div>
+        </div>
+        <div style="position: center">
+            <button type="submit" class="btn btn-primary btn-block"><strong>Save</strong></button>
+        </div>
+    </div>
+</div>

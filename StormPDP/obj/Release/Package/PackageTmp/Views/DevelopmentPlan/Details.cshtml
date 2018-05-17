@@ -1,0 +1,35 @@
+﻿@using StormPDP.Models
+@model DevelopmentPlan
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="list-group">
+    <a class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+            <h3 class="mb-1">@Model.Employee.Name</h3>
+            <small>@Model.DateCreated.Value.ToShortDateString()</small>
+        </div>
+        <p class="mb-1">Development Plan</p>
+        <br />
+        <div class="list-group col-md-12">
+            <ul>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Employee ID: @Model.EmployeeId</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Storm ID: @Model.Employee.StormId</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Current Role: @Model.CurrentRole</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Current Certificates: @Model.CurrentCertification</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Function: @Model.Function</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Comments: @Model.Comment</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Employee's Comments: @Model.EmployeeComment</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Manager's Comments: @Model.ManagerComment</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Employee Rating: @Model.EmployeeRating</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Manager Rating: @Model.ManagerRating</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Agreed Rating: @Model.AgreedRating</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Quarterly Review Date: @Model.QuarterlyReviewDate.Value.ToShortDateString()</li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">Annual Review Date: @Model.AnnualReviewDate.Value.ToShortDateString()</li>
+            </ul>
+        </div>
+    </a>
+</div>

@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Admin Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <h2 style="text-align: center">Admin Page</h2>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center; font-weight: bolder">Employees</div>
+                <div class="card-body" style="font-weight: bolder">
+                    @Html.ActionLink("New Employee", "New", "Employee",
+                        new {},
+                        new {@class = "btn btn-primary btn-lg btn-block"})
+
+                    @Html.ActionLink("View Employees", "Index", "Employee",
+                        new {},
+                        new {@class = "btn btn-primary btn-lg btn-block"})
+                </div>
+            </div>
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center; font-weight: bolder">Development Plans</div>
+                <div class="card-body">
+                    @Html.ActionLink("New Development Plan", "New", "DevelopmentPlan",
+                        new {},
+                        new {@class = "btn btn-primary btn-lg btn-block"})
+
+                    @Html.ActionLink("View Development Plans", "Index", "DevelopmentPlan",
+                        new {},
+                        new {@class = "btn btn-primary btn-lg btn-block"})
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center; font-weight: bolder">Employee Reviews</div>
+                <div class="card-body">
+                    @Html.ActionLink("New Performance Review", "New", "Review",
+                        new {},
+                        new {@class = "btn btn-primary btn-lg btn-block"})
+
+                    @Html.ActionLink("View Performance Reviews", "Index", "Review",
+                        new {},
+                        new {@class = "btn btn-primary btn-lg btn-block"})
+                </div>
+            </div>
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center; font-weight: bolder">Managers</div>
+                <div class="card-body">
+                    @Html.ActionLink("New Manager", "New", "Manager",
+                        new {},
+                        new {@class = "btn btn-primary btn-lg btn-block"})
+
+                    @Html.ActionLink("View Managers", "Index", "Manager",
+                        new {},
+                        new {@class = "btn btn-primary btn-lg btn-block"})
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

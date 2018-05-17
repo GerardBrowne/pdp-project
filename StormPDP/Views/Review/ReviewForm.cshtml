@@ -1,0 +1,101 @@
+﻿@using System.Web.Mvc.Html
+@model StormPDP.ViewModels.ReviewFormViewModel
+@{
+    ViewBag.Title = "Performance Review Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align: center">Performance Review</h2>
+
+@using (@Html.BeginForm("Save", "Review"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+
+    <div class="card border-primary mb-3">
+        <div class="card-body">
+            <div class="form-group">
+                @Html.LabelFor(r => r.Review.EmployeeId)
+                @Html.DropDownListFor(r => r.Review.EmployeeId, new SelectList(Model.Employees, "Id", "Name"), "Select Employee", new { @class = "form-control" })
+                @Html.ValidationMessageFor(r => r.Review.EmployeeId)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(r => r.Review.JobKnowledge)
+                @Html.TextBoxFor(r => r.Review.JobKnowledge, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Comments")
+                @Html.TextBoxFor(r => r.Review.JobKnowledgeComment, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(r => r.Review.WorkQuality)
+                @Html.TextBoxFor(r => r.Review.WorkQuality, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Comments")
+                @Html.TextBoxFor(r => r.Review.WorkQualityComment, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(r => r.Review.Attendance)
+                @Html.TextBoxFor(r => r.Review.Attendance, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Comments")
+                @Html.TextBoxFor(r => r.Review.AttendanceComment, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(r => r.Review.Initiative)
+                @Html.TextBoxFor(r => r.Review.Initiative, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+
+                @Html.Label("Comments")
+                @Html.TextBoxFor(r => r.Review.InitiativeComment, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(r => r.Review.Communication)
+                @Html.TextBoxFor(r => r.Review.Communication, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Comments")
+                @Html.TextBoxFor(r => r.Review.CommunicationComment, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(r => r.Review.Dependability)
+                @Html.TextBoxFor(r => r.Review.Dependability, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Comments")
+                @Html.TextBoxFor(r => r.Review.DependabilityComment, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Overall Rating for Employee")
+                @Html.TextBoxFor(r => r.Review.OverallRating, new { @class ="form-control"})
+            </div>
+            
+
+     
+            <div class="form-group">
+                @Html.LabelFor(r => r.Review.Comment)
+                @Html.TextAreaFor(r => r.Review.Comment, new { @class = "form-control" })
+            </div>
+
+        </div>
+    </div>
+    <div>
+        @Html.HiddenFor(m => m.Review.Id)
+        <div style="position: center">
+            <button type="submit" class="btn btn-primary btn-block">Save</button>
+        </div>
+    </div>
+
+}
+
+@section scripts{
+    @Scripts.Render("~bundles/jqueryval")
+}

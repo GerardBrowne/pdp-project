@@ -1,0 +1,16 @@
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\nunit.engine.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\nunit.engine.api.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\Mono.Cecil.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\ApplicationInsights.config
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\StormPDP.Tests1.dll.config
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\StormPDP.Tests1.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP.Tests1\bin\Debug\StormPDP.Tests1.pdb
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\i\StormPDP.Tests1\Debug\StormPDP.Tests1.csproj.CoreCompileInputs.cache
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\i\StormPDP.Tests1\Debug\StormPDP.Tests1.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\i\StormPDP.Tests1\Debug\StormPDP.Tests1.pdb
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\i\StormPDP.Tests1\Debug\StormPDP.Tests1.csprojResolveAssemblyReference.cache

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Storm Tech PDP</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+@Html.Partial("_Navbar")
+
+<div class="container body-content">
+    @RenderBody()
+    <hr />
+    <footer class="modal-footer", style="position: absolute">
+        <div class="container">
+            <p>
+                &copy; @DateTime.Now.Year - <i>Personal Development Plan Web Application, designed for Storm Technology Ltd.</i>
+            </p>
+        </div>
+    </footer>
+</div>
+    
+@Scripts.Render("~/bundles/lib")
+@RenderSection("scripts", required: false)
+</body>
+</html>
+

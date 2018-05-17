@@ -1,0 +1,16 @@
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP\bin\NUnit3.TestAdapter.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP\bin\NUnit3.TestAdapter.pdb
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP\bin\nunit.engine.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP\bin\nunit.engine.api.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP\bin\Mono.Cecil.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP\bin\ApplicationInsights.config
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP\bin\StormPDP.dll.config
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP\bin\StormPDP.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\b\StormPDP\bin\StormPDP.pdb
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\i\StormPDP\Debug\StormPDP.Migrations.Init.resources
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\i\StormPDP\Debug\StormPDP.Migrations.PopulateManagersTable.resources
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\i\StormPDP\Debug\StormPDP.Migrations.PopulateSkillsTable.resources
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\i\StormPDP\Debug\StormPDP.csproj.GenerateResource.Cache
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\i\StormPDP\Debug\StormPDP.csproj.CoreCompileInputs.cache
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\i\StormPDP\Debug\StormPDP.dll
+C:\Users\gerar\Documents\1SD3\Project\StormPDP\StormPDP\.vs\StormPDP\lut\0\i\StormPDP\Debug\StormPDP.pdb

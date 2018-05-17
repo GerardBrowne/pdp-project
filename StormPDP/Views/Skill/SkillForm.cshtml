@@ -1,0 +1,28 @@
+﻿@using System.Web.Mvc.Html
+@model StormPDP.Models.Skill
+
+@{
+    ViewBag.Title = "SkillForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align: center">Add new Skills</h2>
+
+@using (@Html.BeginForm("Save", "Skill"))
+{
+    <div class="card border-primary mb-3">
+        <div class="card-header"><h5 style="text-align: center;"><strong>New Skills</strong></h5></div>
+        <div class="card-body">
+            <div class="col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(s => s.Name)
+                    @Html.TextBoxFor(s => s.Name, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.HiddenFor(s => s.SkillId);
+    <div class="col-md-12" style="position: center">
+        <button type="submit" class="btn btn-primary btn-block">Save</button>
+    </div>
+}

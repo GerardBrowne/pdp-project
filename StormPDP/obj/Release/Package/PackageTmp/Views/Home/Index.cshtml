@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container" , style="text-align: center">
+    <h1>Storm Technology Ltd.</h1>
+    <p class="lead">Personal Development Plans and Performance Reviews.</p>
+</div>
+
+<div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center;">Employees</div>
+                <div class="card-body">
+                    @Html.ActionLink("Add new Employee", "New", "Employee",
+                                              new { },
+                                              new { @class = "btn btn-primary btn-lg btn-block" })
+                </div>
+            </div>
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center">Development Plans</div>
+                <div class="card-body">
+                    @Html.ActionLink("Create a new Development Plan", "New", "DevelopmentPlan",
+                        new { },
+                        new { @class = "btn btn-primary btn-lg btn-block" })
+                </div>
+            </div>
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center">Employee Reviews</div>
+                <div class="card-body">
+                    @Html.ActionLink("Create a new Performance Review", "New", "Review",
+                        new { },
+                        new { @class = "btn btn-primary btn-lg btn-block" })
+                </div>
+            </div>
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center">Managers</div>
+                <div class="card-body">
+                    @Html.ActionLink("Add a new Manager", "New", "Manager",
+                             new { },
+                             new { @class = "btn btn-primary btn-lg btn-block" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center">Employees</div>
+                <div class="card-body">
+                    @Html.ActionLink("See current Employees", "Index", "Employee",
+                             new { },
+                             new { @class = "btn btn-primary btn-lg btn-block" })
+                </div>
+            </div>
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center">Development Plans</div>
+                <div class="card-body">
+                    @Html.ActionLink("See current Development Plans", "Index", "DevelopmentPlan",
+                        new { },
+                        new { @class = "btn btn-primary btn-lg btn-block" })
+                </div>
+            </div>
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center">Employee Reviews</div>
+                <div class="card-body">
+                    @Html.ActionLink("See current Performance Reviews", "Index", "Review",
+                        new { },
+                        new { @class = "btn btn-primary btn-lg btn-block" })
+                </div>
+            </div>
+            <div class="card border-secondary mb-3">
+                <div class="card-header" , style="text-align: center">Managers</div>
+                <div class="card-body">
+                    @Html.ActionLink("See current Managers", "Index", "Manager",
+                                         new { },
+                                         new { @class = "btn btn-primary btn-lg btn-block" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

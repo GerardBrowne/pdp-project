@@ -1,0 +1,18 @@
+﻿@model StormPDP.ViewModels.DevelopmentPlanFormViewModel
+
+<div class="card border-primary mb-3">
+    <div class="card-header"><h5><strong>B. Personal Objectives</strong></h5></div>
+    <div class="card-body">
+        <h6><strong>What are your professional growth and career ambitions?</strong></h6>
+        <h7><i>Describe where you would like your career to go. What new challenges and responsibilities would you like to take on?</i></h7>
+        <div class="row">
+            <div class="form-group col-md-12">
+                @Html.TextAreaFor(m => m.DevelopmentPlan.Ambition, new { @class = "form-control" })
+            </div>
+            <div class="form-group col-md-12">
+                <h7><i>What Can Storm do to assist this?</i></h7>
+                @Html.TextAreaFor(m => m.DevelopmentPlan.StormHelp, new { @class = "form-control" })
+            </div>
+        </div>
+    </div>
+</div>

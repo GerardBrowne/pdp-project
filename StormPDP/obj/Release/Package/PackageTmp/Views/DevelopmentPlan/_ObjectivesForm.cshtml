@@ -1,0 +1,85 @@
+﻿@model StormPDP.ViewModels.DevelopmentPlanFormViewModel
+
+<div class="card border-primary mb-3">
+    <div class="card-header"><h5><strong>C. End of Year Objectives</strong></h5></div>
+    <div class="card-body">
+        <h6><strong>What specific outcomes/deliverables am I committed to do?</strong></h6>
+        
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    @Html.LabelFor(m => m.Objective.Name)
+                    @Html.TextBoxFor(m => m.Objective.Name, new { @class = "form-control" })
+                </div>
+                <div class="form-group col-md-2">
+                    @Html.Label("Current Competency")
+                    @Html.TextBoxFor(m => m.Objective.Competency, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Objective.Competency)
+                </div>
+                <div class="form-group col-md-4">
+                    @Html.LabelFor(m => m.Objective.Timing)
+                    @Html.TextBoxFor(m => m.Objective.Timing, new { @class = "form-control", type = "text", id = "datepicker" })
+                    @Html.ValidationMessageFor(m => m.Objective.Timing)
+                </div>
+                <div class="form-group col-md-1">
+                    @Html.Label("Achieved?")
+                    @Html.CheckBoxFor(m => m.Objective.IsAchieved, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Objective.IsAchieved)
+                </div>
+            </div>
+        
+        @*<div class="form-row">
+                <div class="form-group col-md-5">
+                    @Html.LabelFor(m => m.Objective.Name)
+                    @Html.TextBoxFor(m => m.Objective.Name, new { @class = "form-control" })
+                </div>
+                <div class="form-group col-md-2">
+                    @Html.Label("Current Competency")
+                    @Html.TextBoxFor(m => m.Objective.Competency, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Objective.Competency)
+                </div>
+                <div class="form-group col-md-4">
+                    @Html.LabelFor(m => m.Objective.Timing)
+                    @Html.TextBoxFor(m => m.Objective.Timing, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Objective.Timing)
+                </div>
+                <div class="form-group col-md-1">
+                    @Html.Label("Achieved?")
+                    @Html.CheckBoxFor(m => m.Objective.IsAchieved, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Objective.IsAchieved)
+                </div>
+            </div>*@
+    </div>
+</div>
+
+<div class="card border-primary mb-3">
+    <div class="card-header"><h5><strong>Training Plans for Objectives</strong></h5></div>
+    <div class="card-body">
+        <h6><strong>What kind of training can help accomplish this?</strong></h6>
+        <div class="form-row">
+            <div class="col-md-12">
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.TrainingPlan.Name)
+                    @Html.TextBoxFor(m => m.TrainingPlan.Name, new { @class = "form-control" })
+                </div>
+                <div class="form-group col-md-6">
+                    @Html.LabelFor(m => m.TrainingPlan.Opportunity)
+                    @Html.TextBoxFor(m => m.TrainingPlan.Opportunity, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-12">
+                <div class="form-group col-md-3">
+                    @Html.Label("Competency")
+                    @Html.TextBoxFor(m => m.TrainingPlan.Competency, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.TrainingPlan.Competency)
+                </div>
+                <div class="form-group col-md-9">
+                    @Html.LabelFor(m => m.TrainingPlan.Timing)
+                    @Html.TextBoxFor(m => m.TrainingPlan.Timing, new { @class = "form-control", type = "date", id = "datepicker"})
+                    @Html.ValidationMessageFor(m => Model.TrainingPlan.Timing)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

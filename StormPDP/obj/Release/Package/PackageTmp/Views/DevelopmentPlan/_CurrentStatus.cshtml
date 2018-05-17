@@ -1,0 +1,30 @@
+﻿@model StormPDP.ViewModels.DevelopmentPlanFormViewModel
+
+<div class="card border-primary mb-3">
+    <div class="card-header"><h5><strong>A. Current Status</strong></h5></div>
+    <div class="card-body">
+        <div class="form-group">
+            @Html.LabelFor(m => m.DevelopmentPlan.EmployeeId)
+            @Html.DropDownListFor(m => m.DevelopmentPlan.EmployeeId, new SelectList(Model.Employees, "Id", "Name"), "Select Employee", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.DevelopmentPlan.EmployeeId)
+        </div>
+        <div class="form-group">
+            <h6><strong>What is your current role?</strong></h6>
+            <h7><i>Describe the duties and responsibilites of your current job title. What competencies do you require for the role?</i></h7>
+            @Html.TextAreaFor(m => m.DevelopmentPlan.CurrentRole, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.DevelopmentPlan.CurrentCertification)
+            @Html.TextAreaFor(m => m.DevelopmentPlan.CurrentCertification, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Practice/Function")
+            @Html.TextAreaFor(m => m.DevelopmentPlan.Function, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <h6><strong>Comments</strong></h6>
+            <h7><i>Discuss any other talents, skills or areas which might require development that wish to discuss with your manager here.</i></h7>
+            @Html.TextAreaFor(m => m.DevelopmentPlan.Comment, new { @class = "form-control" })
+        </div>
+    </div>
+</div>

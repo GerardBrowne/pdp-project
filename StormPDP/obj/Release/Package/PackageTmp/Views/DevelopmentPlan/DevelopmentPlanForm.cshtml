@@ -1,0 +1,77 @@
+﻿@using StormPDP.Models
+@model StormPDP.ViewModels.DevelopmentPlanFormViewModel
+@{
+    ViewBag.Title = "DevelopmentPlanForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align: center">Personal Development Plan</h2>
+<br />
+
+@using (@Html.BeginForm("Save", "DevelopmentPlan"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+
+    <ul class="nav nav-pills nav-justified">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#partA">Current Status</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#partB">Personal Goals</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#partC">Objectives</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#partD">Skills/Strengths</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#partE">Discussion</a>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade show active" id="partA">
+            @Html.Partial("_CurrentStatus")
+        </div>
+
+        <div class="tab-pane fade" id="partB">
+            @Html.Partial("_PersonalObjectives")
+        </div>
+
+        <div class="tab-pane fade" id="partC">
+            @Html.Partial("_ObjectivesForm")
+        </div>
+
+        <div class="tab-pane fade" id="partD">
+            @Html.Partial("_SkillsForm")
+        </div>
+
+        <div class="tab-pane fade" id="partE">
+            @Html.Partial("_DiscussionAndRatings")
+        </div>
+
+        @Html.HiddenFor(m => m.DevelopmentPlan.Id)
+        <div class="col-md-12" style="position: center">
+            <button type="submit" class="btn btn-primary btn-block"><strong>Save</strong></button>
+        </div>
+
+    </div>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $(document).on('click', 'a', function () {
+            $('#skills').multiselect();
+        });
+    </script>
+    
+    <script type="text/javascript">
+        $(document).on('click', 'a', function() {
+            $("#datepicker").datepicker();
+        });
+    </script>
+}

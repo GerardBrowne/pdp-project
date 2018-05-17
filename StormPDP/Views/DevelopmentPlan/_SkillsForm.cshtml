@@ -1,0 +1,56 @@
+﻿@model StormPDP.ViewModels.DevPlanFormViewModel
+
+<div class="card border-primary mb-3">
+    <div class="card-header"><h5><strong>Skills and Strengths</strong></h5></div>
+    <div class="card-body">
+
+        <div class="form-row">
+            <div class="col-md-6">
+                @Html.HiddenFor(m => m.SelectedSkillId)
+
+                <div class="form-group">
+                    @Html.Label("Select Current Technical Skills")
+                    @Html.ListBoxFor(m => m.SelectedSkillsList, new MultiSelectList(Model.Skills, "Value", "Text"), new { id = "multiSelectDropDown", multiple = "multiple" })
+                    @Html.ValidationMessageFor(m => m.SelectedSkillsList)
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                @Html.HiddenFor(m => m.SelectedSkillId)
+
+                <div class="form-group">
+                    @Html.Label("Select Desired Technical Skills")
+                    @Html.ListBoxFor(m => m.SelectedSkillsList, new MultiSelectList(Model.Skills, "Value", "Text"), new { id = "multiSelectDropDown2", multiple = "multiple" })
+                    @Html.ValidationMessageFor(m => m.SelectedSkillsList)
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-6">
+                @Html.HiddenFor(m => m.SelectedSkillId)
+
+                <div class="form-group">
+                    @Html.Label("Select Current Non-Technical Skills")
+                    @Html.ListBoxFor(m => m.SelectedSkillsList, new MultiSelectList(Model.Skills, "Value", "Text"), new { id = "multiSelectDropDown3", multiple = "multiple" })
+                    @Html.ValidationMessageFor(m => m.SelectedSkillsList)
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                @Html.HiddenFor(m => m.SelectedSkillId)
+
+                <div class="form-group">
+                    @Html.Label("Select Desired Non-Technical Skills")
+                    @Html.ListBoxFor(m => m.SelectedSkillsList, new MultiSelectList(Model.Skills, "Value", "Text"), new { id = "multiSelectDropDown4", multiple = "multiple" })
+                    @Html.ValidationMessageFor(m => m.SelectedSkillsList)
+                </div>
+            </div>
+        </div>
+
+    
+        <div style="position: center">
+            <button type="submit" class="btn btn-primary btn-block"><strong>Save</strong></button>
+        </div>
+    </div>
+</div>

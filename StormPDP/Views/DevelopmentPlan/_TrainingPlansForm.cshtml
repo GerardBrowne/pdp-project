@@ -1,0 +1,30 @@
+﻿@model StormPDP.ViewModels.DevPlanFormViewModel
+
+<div class="card border-primary mb-3">
+    <div class="card-header"><h5><strong>C1. Training Plans</strong></h5></div>
+    <div class="card-body">
+        <h6><strong>What specific outcomes/deliverables am I committed to do?</strong></h6>
+        <div class="form-row">
+            <div class="form-group col-md-7">
+                @Html.LabelFor(m => m.TrainingPlan.Name)
+                @Html.TextBoxFor(m => m.TrainingPlan.Name, new { @class = "form-control" })
+                @*@Html.HiddenFor(m => m.TrainingPlan.DevelopmentPlanId, new { Value = Model.DevelopmentPlan.Id })*@
+            </div>
+            <div class="form-group col-md-1">
+                @Html.Label("Competency, 1-5")
+                @Html.TextBoxFor(m => m.TrainingPlan.Competency, new { @class = "form-control" })
+                @*@Html.HiddenFor(m => m.TrainingPlan.DevelopmentPlanId, new { Value = Model.DevelopmentPlan.Id })*@
+            </div>
+            <div class="form-group col-md-3">
+                @Html.LabelFor(m => m.TrainingPlan.Timing)
+                @Html.TextBoxFor(m => m.TrainingPlan.Timing, new { @class = "form-control", type = "date" })
+                @*@Html.HiddenFor(m => m.Objective.DevelopmentPlanId, new { Value = Model.DevelopmentPlan.Id })*@
+            </div>
+            <div class="form-group col-md-1">
+                @Html.LabelFor(m => m.TrainingPlan.Opportunity))
+                @Html.TextBoxFor(m => m.TrainingPlan.Opportunity, new { @class = "form-control" })
+                @*@Html.HiddenFor(m => m.Objective.DevelopmentPlanId, new { Value = Model.DevelopmentPlan.Id })*@
+            </div>
+        </div>
+    </div>
+</div>

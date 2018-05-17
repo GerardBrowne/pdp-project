@@ -1,0 +1,24 @@
+﻿@*@model StormPDP.ViewModels.DevelopmentPlanFormViewModel
+
+<div class="card border-primary mb-3">
+    <div class="card-header"><h5><strong>Skills and Strengths</strong></h5></div>
+    <div class="card-body">
+        <h6><strong>What are your Strengths?</strong></h6>
+        <div class="form-row">
+          <h7><i>List your current technical skills here</i></h7>
+            <div class="form-group col-md-12">
+                @Html.ListBoxFor(m => m.SelectedSkills, new MultiSelectList(Model.SkillsList, "Value", "Text"), new { multiple = "multiple", id = "skills" })
+                @Html.HiddenFor(m => Model.EmployeeSkill.IsCurrent, new { Value = true })
+                @Html.HiddenFor(m => Model.EmployeeSkill.IsTechnical, new { Value = true })*@
+                @*@Html.HiddenFor(m => Model.EmployeeSkill.EmployeeId, new { Value = Model.DevelopmentPlan.EmployeeId })*@
+            @*</div>*@
+            @*<div class="form-group col-md-6">
+                <h7><i>List your desired technical skills here</i></h7>
+                @Html.ListBoxFor(m => m.SelectedSkills, new MultiSelectList(Model.SkillsList, "Value", "Text"), new { multiple = "multiple", id = "skills" })
+                @Html.HiddenFor(m => Model.EmployeeSkill.IsCurrent, new { Value = false })
+                @Html.HiddenFor(m => Model.EmployeeSkill.IsTechnical, new { Value = true })
+                @Html.HiddenFor(m => Model.EmployeeSkill.EmployeeId, new { Value = Model.DevelopmentPlan.EmployeeId })
+            </div>*@
+        @*</div>
+    </div>
+</div>*@
