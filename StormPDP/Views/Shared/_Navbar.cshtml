@@ -1,23 +1,34 @@
-﻿<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+﻿<div class="navbar-fixed">
+    <nav class="teal">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">PDP</a>
+                <a href="#"
+                   data-target="mobile-nav"
+                   class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
 
+                <ul class="right hide-on-med-and-down">
+                    <li class="nav-link">@Html.ActionLink("Home ", "Index", "Home")</li>
+                    <li class="nav-link">@Html.ActionLink("Admin ", "Admin", "Home")</li>
+                    <li class="nav-link">@Html.Partial("_LoginPartial")</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
 
-        <div class="navbar-brand">
-            <img src="http://www.storm.ie/PublishingImages/Ciall-Acquisition/storm%20logo.png" alt="StormLogo" width="154" height="61">
-        </div>
-        <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-link">@Html.ActionLink("Home ", "Index", "Home")</li>
-                <li class="nav-link">@Html.ActionLink("Admin ", "Admin", "Home")</li>
-                <li class="nav-link">@Html.ActionLink("Employees ", "Index", "Employee")</li>
-                <li class="nav-link">@Html.ActionLink("Managers", "Index", "Manager")</li>
-                <li class="nav-link">@Html.ActionLink("Development Plans", "Index", "DevelopmentPlan")</li>
-                <li class="nav-link">@Html.ActionLink("Performance Reviews", "Index", "Review")</li>
-            </ul>
-            @Html.Partial("_LoginPartial")
-        </div>
-    </div>
-</nav>
+<ul class="sidenav" id="mobile-nav">
+    <li class="nav-link">@Html.ActionLink("Home ", "Index", "Home")</li>
+    <li class="nav-link">@Html.ActionLink("Admin ", "Admin", "Home")</li>
+    <li class="nav-link">@Html.Partial("_LoginPartial")</li>
+</ul>
+
+<script src="~/Scripts/materialize.min.js"></script>
+
+<script>
+    // sidenav
+    const sideNav = document.querySelector('.sidenav')
+    M.Sidenav.init(sideNav, {});
+</script>

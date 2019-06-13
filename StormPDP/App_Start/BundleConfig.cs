@@ -11,7 +11,7 @@ namespace StormPDP
                 "~/Scripts/jquery-{version}.js",
                 "~/Scripts/jquery-ui-{version}.js",
                 "~/Scripts/popper.min.js",
-                "~/Scripts/bootstrap.js",
+                "~/Scripts/materialize.js",
                 "~/Scripts/bootstrap-multiselect.js",
                 "~/Scripts/jquery.scrollme.min.js",
                 "~/Content/DataTables/datatables.js",
@@ -27,7 +27,7 @@ namespace StormPDP
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-lux.css",
+                      "~/Content/materialize.css",
                       "~/Content/DataTables/datatables.css",
                       "~/Content/DataTables/dataTables.bootstrap4.css",
                       "~/Content/site.css"

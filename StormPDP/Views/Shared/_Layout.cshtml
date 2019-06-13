@@ -3,28 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - StormPDP</title>
+    <title>@ViewBag.Title - PDP</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/Chosen/chosen.min.css" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
-        @Html.Partial("_Navbar")
-            <div class="container">
-                @RenderBody()
-            </div>
-            <footer class="modal-footer" , style="position: center; align-content: center ">
-                <div class="container">
-                    <h7 style="text-align: center">
-                        &copy; @DateTime.Now.Year - <i>Personal Development Plan Web Application, designed for Storm Technology Ltd.</i>
-                    </h7>
-                </div>
-            </footer>
-
+<body style="margin:0;">
+    @Html.Partial("_Navbar")
+    <div class="container">
+        @RenderBody()
+    </div>
+    @*@Html.Partial("_Footer")*@
+    
     @Scripts.Render("~/bundles/lib")
     <script src="~/Scripts/chosen.jquery.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
+
 </html>

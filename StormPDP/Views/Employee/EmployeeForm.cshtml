@@ -1,5 +1,4 @@
-﻿
-@using System.Web.Mvc.Html
+﻿@using System.Web.Mvc.Html
 @model StormPDP.ViewModels.EmployeeFormViewModel
 @{
     ViewBag.Title = "Employee Form";
@@ -13,58 +12,57 @@
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true, "Please fix the following errors.")
 
-    <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade show active" id="partA">
-            <div class="card border-primary mb-3">
-                <div class="card-header"><h5><strong>General Information</strong></h5></div>
-                <div class="card-body">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            @Html.LabelFor(e => e.Employee.StormId)
-                            @Html.TextBoxFor(m => m.Employee.StormId, new { @class = "form-control" })
-                        </div>
-                        <div class="form-group">
-                            @Html.LabelFor(m => m.Employee.Name)
-                            @Html.TextBoxFor(m => m.Employee.Name, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(m => m.Employee.Name)
-                        </div>
-                        <div class="form-group">
-                            @Html.LabelFor(m => m.Employee.ManagerId)
-                            @Html.DropDownListFor(m => m.Employee.ManagerId, new SelectList(Model.Managers, "Id", "Name"), "Select Manager", new { @class = "form-control" })
-                        </div>
-                        <div class="form-group">
-                            @Html.LabelFor(m => m.Employee.DateOfBirth)
-                            @Html.TextBoxFor(m => m.Employee.DateOfBirth, new { @class = "form-control", type = "date" })
-                            @Html.ValidationMessageFor(m => m.Employee.DateOfBirth)
-                        </div>
-                        <div class="form-group">
-                            @Html.LabelFor(m => m.Employee.Email)
-                            @Html.TextBoxFor(m => m.Employee.Email, new { @class = "form-control" })
-                        </div>
-                        <div class="form-group">
-                            @Html.LabelFor(m => m.Employee.Position)
-                            @Html.TextBoxFor(m => m.Employee.Position, new { @class = "form-control" })
-                        </div>
-                    </div>
-                    @Html.HiddenFor(m => m.Employee.Id)
-                    <div class="col-md-12" style="position: center">
-                        <button type="submit" class="btn btn-primary btn-block">Save</button>
-                    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    @Html.LabelFor(e => e.Employee.StormId)
+                    @Html.TextBoxFor(m => m.Employee.StormId, new { @class = "form-control" })
+                </div>
+                <div class="input-field col s6">
+                    @Html.LabelFor(m => m.Employee.Name)
+                    @Html.TextBoxFor(m => m.Employee.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Employee.Name)
+                </div>
+                @*<div class="input-field col s12">
+                    <select id="select">
+                        @Html.LabelFor(m => m.Employee.ManagerId)
+                        @Html.DropDownListFor(m => m.Employee.ManagerId, new SelectList(Model.Managers, "Id", "Name"), "Select Manager", new { @class = "form-control" })
+                    </select>
+                </div>*@
+                <div class="col s12">
+                    @Html.LabelFor(m => m.Employee.DateOfBirth)
+                    @Html.TextBoxFor(m => m.Employee.DateOfBirth, new { @class = "form-control", type = "date" })
+                    @Html.ValidationMessageFor(m => m.Employee.DateOfBirth)
+                </div>
+                <div class="input-field col s6">
+                    @Html.LabelFor(m => m.Employee.Email)
+                    @Html.TextBoxFor(m => m.Employee.Email, new { @class = "form-control" })
+                </div>
+                <div class="input-field col s6">
+                    @Html.LabelFor(m => m.Employee.Position)
+                    @Html.TextBoxFor(m => m.Employee.Position, new { @class = "form-control" })
+                </div>
+                @Html.HiddenFor(m => m.Employee.Id)
+                <div class="col s12" style="position: center">
+                    <button type="submit" class="btn btn-large btn-login waves-effect waves-light">Save<i class="material-icons right">send</i></button>
                 </div>
             </div>
         </div>
     </div>
 
-
-   
-    
 }
 @section scripts{
     <script type="text/javascript">
-        $(document).ready(function() {
-            $.validator.methods.date = function(value, element) {
+        $(document).ready(function () {
+            $.validator.methods.date = function (value, element) {
                 return this.optional(element) || moment(value).format("DD-MMM-YYYY");
             };
         });
+
+        //$(document).ready(function () {
+        //    $('select').formSelect();
+        //});
+
     </script>
 }

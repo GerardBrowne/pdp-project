@@ -6,7 +6,7 @@
 
 <br />
 <br />
-<h2 style="text-align: center">Personal Development Plan</h2>
+<h2 style="color:white; text-align:center">Personal Development Plan</h2>
 <br />
 
 @using (Html.BeginForm("Save", "DevelopmentPlan"))
@@ -14,24 +14,24 @@
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true, "Please fix the following errors")
 
-    <ul class="nav nav-pills nav-justified">
-        <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#init">Select an Employee</a>
+    <ul class="tabs">
+        <li class="tab col s2">
+            <a class="active" data-toggle="tab" href="#init">Select an Employee</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#partA">Current Status</a>
+        <li class="tab col s2">
+            <a data-toggle="tab" href="#partA">Current Status</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#partB">Personal Objectives</a>
+        <li class="tab col s2">
+            <a data-toggle="tab" href="#partB">Personal Objectives</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#partC">Skills/Strengths</a>
+        <li class="tab col s2">
+            <a data-toggle="tab" href="#partC">Skills/Strengths</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#partD">Objectives</a>
+        <li class="tab col s2">
+            <a data-toggle="tab" href="#partD">Objectives</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#partE">Discussion</a>
+        <li class="tab col s2">
+            <a data-toggle="tab" href="#partE">Discussion</a>
         </li>
     </ul>
     <div id="myTabContent" class="tab-content">
