@@ -74,7 +74,7 @@ namespace StormPDP.Tests.ControllerTests
 
             //Assert
             Assert.IsNotNull(actual);
-            Assert.AreEqual(actual.ViewName, "DevelopmentPlanForm");
+            Assert.AreEqual(actual.ViewName, "DevPlanForm");
         }
 
         [Test]
