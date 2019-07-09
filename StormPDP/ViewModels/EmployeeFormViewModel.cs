@@ -17,14 +17,8 @@ namespace StormPDP.ViewModels
 
         public IEnumerable<SelectListItem> Skills { get; set; }
 
-        //public Skill Skill { get; set; }
-
         public ICollection<EmployeeSkill> EmployeeSkills { get; set; }
 
-        //public EmployeeSkill EmployeeSkill { get; set; }
-
         public Employee Employee { get; set; }
-
-        //public DevelopmentPlan DevelopmentPlan { get; set; }
     }
 }

@@ -11,7 +11,6 @@ namespace StormPDP.ViewModels
     {
         public IEnumerable<SelectListItem> SkillsList { get; set; }
 
-
         public int SelectedSkillId { get; set; }
 
         public MultiSelectList Skills { get; set; }

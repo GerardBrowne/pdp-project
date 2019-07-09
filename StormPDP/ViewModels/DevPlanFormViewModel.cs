@@ -21,7 +21,6 @@ namespace StormPDP.ViewModels
 
         public IEnumerable<SelectListItem> Skills { get; set; }
 
-
         public ICollection<EmployeeSkill> EmployeeSkills { get; set; }
 
         public EmployeeSkill EmployeeSkill { get; set; }
@@ -29,6 +28,5 @@ namespace StormPDP.ViewModels
         public Objective Objective { get; set; }
 
         public TrainingPlan TrainingPlan { get; set; }
-
     }
 }

@@ -8,64 +8,41 @@
 <br />
 <h2 style="color:white; text-align:center">Personal Development Plan</h2>
 <br />
+<div class="container-dp">
+    <div class="row">
+        <div class="col sm12">
+            @using (Html.BeginForm("Save", "DevelopmentPlan"))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "Please fix the following errors")
 
-@using (Html.BeginForm("Save", "DevelopmentPlan"))
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true, "Please fix the following errors")
-
-    <ul class="tabs">
-        <li class="tab col s2">
-            <a class="active" data-toggle="tab" href="#init">Select an Employee</a>
-        </li>
-        <li class="tab col s2">
-            <a data-toggle="tab" href="#partA">Current Status</a>
-        </li>
-        <li class="tab col s2">
-            <a data-toggle="tab" href="#partB">Personal Objectives</a>
-        </li>
-        <li class="tab col s2">
-            <a data-toggle="tab" href="#partC">Skills/Strengths</a>
-        </li>
-        <li class="tab col s2">
-            <a data-toggle="tab" href="#partD">Objectives</a>
-        </li>
-        <li class="tab col s2">
-            <a data-toggle="tab" href="#partE">Discussion</a>
-        </li>
-    </ul>
-    <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade show active" id="init">
-            <div class="card border-primary mb-3">
-                <div class="card-header"><h5><strong>Select an employee and navigate to any section</strong></h5></div>
-                <div class="card-body">
-                    <div class="form-group">
-                        @Html.Label("Employee")
-                        @Html.DropDownListFor(m => m.DevelopmentPlan.EmployeeId, new SelectList(Model.Employees, "Id", "Name"), "Select Employee", new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.DevelopmentPlan.EmployeeId)
+                
+                                <div class="form-group">
+                                    @Html.Label("Employee")
+                                    @Html.DropDownListFor(m => m.DevelopmentPlan.EmployeeId, new SelectList(Model.Employees, "Id", "Name"), "Select Employee", new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.DevelopmentPlan.EmployeeId)
+                                </div>
+                    <div class="tab-pane fade" id="partA">
+                        @Html.Partial("_CurrentStatus")
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="partA">
-            @Html.Partial("_CurrentStatus")
-        </div>
-        <div class="tab-pane fade" id="partB">
-            @Html.Partial("_PersonalObjectives")
-        </div>
-        <div class="tab-pane fade" id="partC">
-            @Html.Partial("_SkillsForm")
-        </div>
-        <div class="tab-pane fade" id="partD">
-            @Html.Partial("_ObjectivesForm")
-        </div>
-        <div class="tab-pane fade" id="partE">
-            @Html.Partial("_DiscussionAndRatings")
-        </div>
+                    <div class="tab-pane fade" id="partB">
+                        @Html.Partial("_PersonalObjectives")
+                    </div>
+                    <div class="tab-pane fade" id="partC">
+                        @Html.Partial("_SkillsForm")
+                    </div>
+                    <div class="tab-pane fade" id="partD">
+                        @Html.Partial("_ObjectivesForm")
+                    </div>
+                    <div class="tab-pane fade" id="partE">
+                        @Html.Partial("_DiscussionAndRatings")
+                    </div>
 
+            }
+        </div>
+        
     </div>
-}
-
+</div>
 @section scripts
 {
     @Scripts.Render("~/bundles/jqueryval")

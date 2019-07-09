@@ -14,8 +14,5 @@ namespace StormPDP.ViewModels
         public Employee Employee { get; set; }
 
         public Review Review { get; set; }
-
-       
-
     }
 }

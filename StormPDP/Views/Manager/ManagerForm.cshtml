@@ -4,25 +4,27 @@
     ViewBag.Title = "ManagerForm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+    <br />
+    <div class="container-reg">
+        <h2 style="text-align:center;color:teal">Add/Update Manager</h2>
 
-<h2>Add/Update Manager</h2>
+        @using (@Html.BeginForm("Save", "Manager"))
+        {
+            <div class="form-group">
+                @Html.LabelFor(m => m.Manager.StormId)
+                @Html.TextBoxFor(m => m.Manager.StormId, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Manager.Name)
+                @Html.TextBoxFor(m => m.Manager.Name, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Manager.Email)
+                @Html.TextBoxFor(m => m.Manager.Email, new { @class = "form-control" })
+            </div>
 
-@using (@Html.BeginForm("Save", "Manager"))
-{
-    <div class="form-group">
-        @Html.LabelFor(m => m.Manager.StormId)
-        @Html.TextBoxFor(m => m.Manager.StormId, new { @class = "form-control" })
+            @Html.HiddenFor(m => m.Manager.Id)
+            <button type="submit" class="btn btn-primary btn-sharp">Save</button>
+
+        }
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Manager.Name)
-        @Html.TextBoxFor(m => m.Manager.Name, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Manager.Email)
-        @Html.TextBoxFor(m => m.Manager.Email, new { @class = "form-control" })
-    </div>
-
-    @Html.HiddenFor(m => m.Manager.Id)
-    <button type="submit" class="btn btn-primary btn-sharp">Save</button>
-
-}
